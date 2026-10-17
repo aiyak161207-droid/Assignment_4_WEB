@@ -1,0 +1,28 @@
+/* Native HTML constraints do the validation; CSS only reveals feedback after interaction. */
+.form-control:user-invalid,
+.form-select:user-invalid {
+  border-color: #c43d4b;
+  background-image: none;
+}
+.form-control:user-invalid ~ .invalid-feedback,
+.form-select:user-invalid ~ .invalid-feedback,
+.form-check-input:user-invalid ~ .invalid-feedback {
+  display: block;
+}
+.form-control:user-valid,
+.form-select:user-valid {
+  border-color: #0f6b5f;
+}
+.form-check-input:user-invalid {
+  border-color: #c43d4b;
+}
+.form-check-input:focus-visible {
+  outline: 3px solid #f2a93b;
+  outline-offset: 2px;
+}
+.invalid-feedback {
+  font-size: 0.78rem;
+}
+fieldset:has(input[type="radio"]:user-invalid) > .invalid-feedback {
+  display: block;
+}

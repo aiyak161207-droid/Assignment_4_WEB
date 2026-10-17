@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 1 — Book a train ticket</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="ticket-page">
+    <main class="container py-4 py-lg-5">
+      <header class="page-heading mb-4">
+        <span class="eyebrow">TRAVEL MADE SIMPLE</span>
+        <h1>Book your train ticket</h1>
+        <p>Plan your next journey in a few easy steps.</p>
+      </header>
+      <section class="ticket-card" aria-labelledby="ticket-title">
+        <div class="ticket-card-head">
+          <div>
+            <span class="eyebrow text-light">YOUR JOURNEY</span>
+            <h2 id="ticket-title">Find your train</h2>
+          </div>
+          <span class="train-icon" aria-hidden="true">↗</span>
+        </div>
+        <form action="#" method="get">
+          <fieldset class="mb-4">
+            <legend class="section-label">Trip type</legend>
+            <div class="trip-switch">
+              <input
+                class="btn-check"
+                type="radio"
+                name="trip"
+                id="one-way"
+                value="one-way"
+                checked
+              /><label class="trip-option" for="one-way">One way</label>
+              <input
+                class="btn-check"
+                type="radio"
+                name="trip"
+                id="round-trip"
+                value="round-trip"
+              /><label class="trip-option" for="round-trip">Round trip</label>
+            </div>
+          </fieldset>
+          <div class="row g-3 mb-3">
+            <div class="col-12 col-md-6">
+              <label for="from" class="form-label"
+                >From <span class="required-mark">*</span></label
+              ><select class="form-select" id="from" name="from" required>
+                <option value="" selected disabled>
+                  Choose departure station
+                </option>
+                <option>Astana</option>
+                <option>Almaty</option>
+                <option>Karaganda</option>
+                <option>Shymkent</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="to" class="form-label"
+                >To <span class="required-mark">*</span></label
+              ><select class="form-select" id="to" name="to" required>
+                <option value="" selected disabled>
+                  Choose arrival station
+                </option>
+                <option>Almaty</option>
+                <option>Astana</option>
+                <option>Karaganda</option>
+                <option>Shymkent</option>
+              </select>
+            </div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-12 col-md-6">
+              <label for="departure" class="form-label"
+                >Departure <span class="required-mark">*</span></label
+              ><input
+                class="form-control"
+                type="date"
+                id="departure"
+                name="departure"
+                required
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="passengers" class="form-label">Passengers</label
+              ><select class="form-select" id="passengers" name="passengers">
+                <option>1 adult</option>
+                <option>2 adults</option>
+                <option>3 adults</option>
+                <option>4 adults</option>
+                <option>5 adults</option>
+                <option>6 adults</option>
+              </select>
+            </div>
+          </div>
+          <fieldset class="mb-3">
+            <legend class="form-label">
+              Carriage class <span class="required-mark">*</span>
+            </legend>
+            <div class="row g-2">
+              <div class="col-12 col-sm-4">
+                <input
+                  class="btn-check"
+                  type="radio"
+                  name="class"
+                  id="standard"
+                  value="standard"
+                  required
+                /><label class="class-option" for="standard"
+                  ><span class="class-dot"></span
+                  ><span
+                    ><strong>Standard</strong
+                    ><small>Comfortable travel</small></span
+                  ></label
+                >
+              </div>
+              <div class="col-12 col-sm-4">
+                <input
+                  class="btn-check"
+                  type="radio"
+                  name="class"
+                  id="comfort"
+                  value="comfort"
+                /><label class="class-option" for="comfort"
+                  ><span class="class-dot"></span
+                  ><span
+                    ><strong>Comfort</strong><small>Extra comfort</small></span
+                  ></label
+                >
+              </div>
+              <div class="col-12 col-sm-4">
+                <input
+                  class="btn-check"
+                  type="radio"
+                  name="class"
+                  id="business"
+                  value="business"
+                /><label class="class-option" for="business"
+                  ><span class="class-dot"></span
+                  ><span
+                    ><strong>Business</strong
+                    ><small>Premium journey</small></span
+                  ></label
+                >
+              </div>
+            </div>
+          </fieldset>
+          <div class="row g-3 mb-3">
+            <div class="col-12 col-md-6">
+              <label for="phone" class="form-label"
+                >Phone <span class="required-mark">*</span></label
+              ><input
+                class="form-control"
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                placeholder="+7 (___) ___-__-__"
+                required
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="email" class="form-label"
+                >Email <span class="required-mark">*</span></label
+              ><input
+                class="form-control"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-check agreement mb-4">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="agreement"
+              name="agreement"
+              required
+            /><label class="form-check-label" for="agreement"
+              >I agree to the terms and conditions
+              <span class="required-mark">*</span></label
+            >
+          </div>
+          <div class="d-flex flex-column-reverse flex-sm-row gap-2 action-row">
+            <button class="btn btn-outline-clear" type="reset">Clear</button
+            ><button class="btn btn-find" type="submit">
+              Find trains <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </form>
+      </section>
+      <p class="footer-note text-center mt-4">
+        Your next destination is closer than you think.
+      </p>
+    </main>
+  </body>
+</html>
